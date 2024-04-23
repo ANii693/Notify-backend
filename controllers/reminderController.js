@@ -102,12 +102,12 @@ const sendEmailNotifications = async (reminder) => {
       return;
     }
 
-    const message = `Hello ${user.name},\n\nIt's time to take your medication: ${reminder.medicationName}.`;
+    const message = `Hello ${user.name},\n\nIt's your time for your reminder: ${reminder.medicationName}.`;
 
     // Send the email using the sendEmail function
     await sendEmail({
       email: user.email,
-      subject: "Medication Reminder",
+      subject: "Reminder",
       message,
     });
 
@@ -153,12 +153,11 @@ const sendWhatsappNotifications = async (reminder) => {
       return;
     }
 
-    const message = `Hello ${user.name},\n\nIt's time to take your medication: ${reminder.medicationName}.`;
+    const message = `Hello ${user.name},\n\nIt's time for your reminder: ${reminder.medicationName}.`;
 
     // Send the email using the sendEmail function
     await sendWhatsapp({
       number: user.number,
-
       message,
     });
 
