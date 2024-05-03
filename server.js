@@ -30,4 +30,4 @@ process.on("unhandledRejection", (err) => {
   });
 });
 
-module.exports = app;
+module.exports = server;
